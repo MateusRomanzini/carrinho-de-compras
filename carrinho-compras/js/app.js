@@ -1,4 +1,6 @@
 let totalGeral = 0
+document.getElementById('lista-produtos').innerHTML = '';
+document.getElementById('valor-total').innerHTML = 'R$ 0';
 
 function adicionar() {
     // Recuperar valores do nome do produto, quantidade e do valor
@@ -15,12 +17,16 @@ function adicionar() {
   </section>`;
     // Atualizar o valor total
     totalGeral = totalGeral + preco;
-    let campoTotal = document.getElementById('Valor-total');
+    let campoTotal = document.getElementById('valor-total');
     campoTotal.textContent = `R$ ${totalGeral}`;
+    document.getElementById('quantidade').value = 0;
 }
 
 
 function limpar() {
-
-
+  totalGeral = 0
+  document.getElementById('lista-produtos').innerHTML = '';
+  document.getElementById('valor-total').innerHTML = 'R$ 0';  
 }
+  
+
